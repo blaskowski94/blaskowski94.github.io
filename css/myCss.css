@@ -1,152 +1,162 @@
 body {
-  color: #5a5a5a;
+    color: #5a5a5a;
 }
 
 .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 .my-btn-color {
-  background-color: #347AB6;
-}
-
-.my-color {
-  color: #347AB6;
+    background-color: #347AB6;
 }
 
 .social div {
-  color: #347AB6;
+    color: #347AB6;
 }
 
 .social i {
-  font-size: 60px;
+    font-size: 60px;
 }
 
 .img-button {
-  background: none;
-  padding: 0;
-  border: 1px solid black;
-  cursor: pointer;
+    background: none;
+    padding: 0;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
-@media (min-width:992px){
-  .social:hover, .social a:hover, .social a:hover div, .social:hover div {
-    text-decoration: none;
-    color: #FFF;
-    background-color: #347AB6;
-  }
-}
-
-/* screens larger than 768px */
-@media (min-width:768px) {
-  .carousel-item img {
-    height: 500px;
-  }
-  .jumbotron {
-    background-image: url("../images/headerImage.png");
-    background-size: cover;
-    border-radius: 0;
-  }
-  .caption {
-    padding: 20px;
-    background-color: black;
-    opacity: 0.7;
-  }
-  .photo-vert-align {
+.photo-center {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-  }
-  .caption>p {
-    color: #FFF;
-    opacity: 1;
-    text-align: center;
-  }
-  a.hyperlink:link, a.hyperlink:visited, a.hyperlink:hover, a.hyperlink:active {
-    color: #FFF;
-    text-decoration: underline;
-  }
-  .mobile-only {
-    display: none;
-  }
+    justify-content: center;
+}
+
+.photo-center img {
+    width: 500px;
+}
+
+/* screens larger than 992px */
+@media (min-width: 992px) {
+    .social:hover, .social a:hover, .social a:hover div, .social:hover div {
+        text-decoration: none;
+        color: #FFF;
+        background-color: #347AB6;
+    }
+}
+
+/* screens larger than 768px */
+@media (min-width: 768px) {
+    .carousel-item img {
+        height: 500px;
+    }
+
+    .jumbotron {
+        background-image: url("../images/headerImage.png");
+        background-size: cover;
+        border-radius: 0;
+    }
+
+    .caption {
+        padding: 20px;
+        background-color: black;
+        opacity: 0.7;
+    }
+
+    .caption > p {
+        color: #FFF;
+        opacity: 1;
+        text-align: center;
+    }
+
+    a.hyperlink:link, a.hyperlink:visited, a.hyperlink:hover, a.hyperlink:active {
+        color: #FFF;
+        text-decoration: underline;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .social a:hover {
+        text-decoration: none;
+    }
 }
 
 /* screens less than 768px (tablet & mobile) */
-@media(max-width:768px) {
-  .not-on-tablet {
-    display: none;
-  }
-  .mobile-less-padding-bottom {
-    padding-bottom: 10px;
-  }
+@media (max-width: 768px) {
+    .jumbotron {
+        background: white none;
+        padding: 20px 0 0;
+        margin: 0;
+    }
+
+    .not-on-tablet {
+        display: none;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .social a:hover {
+        text-decoration: none;
+    }
+
+    .social i {
+        font-size: 40px;
+    }
+
+    .mobile-text-center {
+        text-align: center;
+    }
+
 }
 
 /* screens between 600 and 768px (portrait tablet/large phone)*/
-@media (max-width:768px) and (min-width:600px) {
+@media (max-width: 768px) and (min-width: 600px) {
 }
 
 /* screens smaller than 600px (phones) */
 
-@media (max-width:600px) {
-  .jumbotron {
-    background-image: none;
-    background-color: white;
-    padding-bottom: 0px;
-  }
-  .caption {
-    text-align: center;
-  }
-  .mobile-only {
-    margin-top: 0px;
-    margin-top: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .mobile-padding-bottom {
-    padding-bottom: 30px;
-  }
-  .mobile-text-center {
-    text-align: center;
-  }
-  .not-on-mobile {
-    display: none;
-  }
+@media (max-width: 600px) {
+
 }
 
 /* Rules for sizing the icon. */
 
 .material-icons.md-18 {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .material-icons.md-24 {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .material-icons.md-36 {
-  font-size: 36px;
+    font-size: 36px;
 }
 
 .material-icons.md-48 {
-  font-size: 48px;
+    font-size: 48px;
 }
 
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark {
-  color: rgba(0, 0, 0, 0.54);
+    color: rgba(0, 0, 0, 0.54);
 }
 
 .material-icons.md-dark.md-inactive {
-  color: rgba(0, 0, 0, 0.26);
+    color: rgba(0, 0, 0, 0.26);
 }
 
 /* Rules for using icons as white on a dark background. */
 .material-icons.md-light {
-  color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .material-icons.md-light.md-inactive {
-  color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.3);
 }
