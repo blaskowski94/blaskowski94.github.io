@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Address Book</title>
+    <link rel="icon" href='images/logo.png'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Loads CSS for background-->
+    <link rel="stylesheet" href="css/addressbootstrap.min.css">
+    <link href="css/CssAddressBook.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/JSAddressBook.js"></script>
+</head>
+<body onload="javascript:pageLoad()">
+<!--Sets up navigation bar-->
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header container-fluid">
+        <a class="navbar-brand" href="javascript:void(0)" onclick="home()"><img src='images/logo.png'
+                                                                                alt="Address Book" class="logoImg"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li id="addTab" class=""><a href="javascript:void(0)" onclick="addContact()">Add Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<!--Links to elements in js Array-->
+<div class="container-fluid midPane">
+    <div class="row">
+        <ul class="col-xs-2 sidenav text-center" id="contactList">
+            <li onclick="openContact(0)" id="contact0" class="tab"></li>
+            <li onclick="openContact(1)" id="contact1" class="tab"></li>
+            <li onclick="openContact(2)" id="contact2" class="tab"></li>
+        </ul>
+        <!--Sets up basic page layout-->
+        <div class="col-xs-10 mainContent">
+            <h1>Welcome to Your Address Book</h1>
+            <p id="home">Click a name on the left to see contact information.</p>
+            <div id="contact" class="contact">
+                <label>Name: </label>
+                <p id="name"></p>
+                <label>Phone number: </label>
+                <p id="phoneNum"></p>
+                <label>E-mail: </label>
+                <p id="email"></p>
+                <button class="btn btn-primary" type="button" onClick="edit()">Edit</button>
+                <button class="btn btn-primary" type="button" onClick="del()">Delete</button>
+            </div>
+            <div id="edit" class="edit">
+                <div class="form-group row">
+                    <label class="col-xs-2 col-form-label">*Name: </label>
+                    <div class="col-xs-5">
+                        <input class="form-control" type="text" id="editname" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-2 col-form-label">Phone number: </label>
+                    <div class="col-xs-5">
+                        <input class="form-control" type="phone" id="editphone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-2 col-form-label">Email: </label>
+                    <div class="col-xs-5">
+                        <input class="form-control" type="email" id="editemail">
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" onClick="save()">Save</button>
+                <button class="btn btn-primary" type="button" onClick="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Footer of page-->
+<footer class="text-center container-fluid navbar-fixed-bottom">Bob Laskowski, Hunter Winner, Manny Xinico - 2016 -
+    Compilers I - Project 3
+</footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: -1px;
+    border-radius: 0;
+    background-color: #222222;
+    height: 10%;
+    width: 100%;
+}
+/*Defines size of HTML page*/
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/*Defines size of HTML window allocated to the information display area*/
+.midPane {
+    height: 80%;
+}
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #222222;
+    min-height: 80%;
+    list-style: none;
+    position: absolute;
+    width: 15%;
+    min-width: 150px;
+    border-bottom: 2px;
+}
+/*Sets up side nav bar*/
+.sidenav li {
+    padding: 10px 40px 10px 40px;
+    color: #999999;
+}
+/*Changes contact name color when user points at name of a contact*/
+.sidenav li:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background: black;
+}
+/*Colors the background of the page black*/
+.activeTab {
+    color: #fff !important;
+    background: black;
+}
+/*Sets up top nav bar*/
+.navbar-header {
+    background-color: #222222;
+}
+.mainContent {
+    height: 100%;
+    padding: 20px 0 0 50px;
+    margin-left: 15%;
+}
+/* Set black background color, white text and some padding */
+footer {
+    position: relative;
+    background-color: #222222;
+    color: #999999;
+    padding-top: 25px;
+    width: 100%;
+    height: 11%;
+}
+/* On small screens, define styling */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        width: 150px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+
+    .sidenav a {
+        padding: 10px;
+    }
+
+    .mainContent {
+        margin-left: 150px;
+    }
+}
+/* No display for contact and edit by default */
+.contact {
+    display: none;
+}
+.edit {
+    display: none;
+}
+
+/* Set size of logo image */
+.logoImg{
+    width: 25px;
+    heigh: 25px;
+}
+
+/* Add padding to add contact tab */
+#addTab{
+    padding-top: 5px;
+}
