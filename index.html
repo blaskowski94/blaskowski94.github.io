@@ -8,8 +8,8 @@
     <meta name="description" content="computer science, portfolio, coding, javascript, resume, projects, programming">
     <meta name="author" content="Bob Laskowski">
     <title>Bob Laskowski</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
@@ -23,12 +23,13 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
 </head>
 
-<body class="container py-3">
+<body class="container py-3" data-spy="scroll" data-target="#myNav">
 <!-- Navbar -->
-<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" id="myNav">
+    <a class="navbar-brand" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
             aria-controls="navbar">
         <span class="navbar-toggler-icon"></span>
@@ -36,7 +37,7 @@
 
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">[Home]</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home">[Home]</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">[About Me]</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">[Projects]</a></li>
             <li class="nav-item"><a class="nav-link" href="#resume">[Resume]</a></li>
@@ -46,35 +47,47 @@
 </nav>
 
 <!-- Intro -->
+<span class="anchor" id="home"></span>
 <div class="jumbotron">
     <div class="caption">
         <p class="lead">Welcome to my portfolio website! I am a Senior at <a href="https://www.augsburg.edu"
                                                                              target="_blank" class="hyperlink">Augsburg
-            University</a> in Minneapolis, MN double majoring in Computer Science and Mathematics. Augsburg is a small
-            private school in the heart of the Twin Cities. At school I am the president of our chapter of Association
-            for Computing Machinery (ACM) as well as the president of Unbounded, our math club. I can usually be found
-            in the Linux Lab tutoring or working on projects with friends. I will be starting full time as a software
+            University</a> in Minneapolis, MN double majoring in Computer Science and Mathematics. Augsburg is a
+            small
+            private school in the heart of the Twin Cities. At school I am the president of our chapter of
+            Association
+            for Computing Machinery (ACM) as well as the president of Unbounded, our math club. I can usually be
+            found
+            in the Linux Lab tutoring or working on projects with friends. I will be starting full time as a
+            software
             developer at Trimble after I graduate in May 2018.
         </p>
     </div>
 </div>
 
-<hr class="mobile-only" />
+<hr class="mobile-only"/>
 <!-- Main Content -->
 <!-- About me -->
-<div class="row" id="about">
+<span class="anchor" id="about"></span>
+<div class="row">
     <div class="col-lg-8 py-2">
         <h2 class="featurette-heading mobile-text-center">[About Me]</h2>
         <p class="lead">I am a passionate, hardworking and reliable young professional trying to
-            learn as much as I can about the vast worlds of computer science and mathematics. Between homework and work,
-            you will usually find me working on projects with my friends, playing with our 3D printer or reading books
+            learn as much as I can about the vast worlds of computer science and mathematics. Between homework and
+            work,
+            you will usually find me working on projects with my friends, playing with our 3D printer or reading
+            books
             on programming topics. Outside of school I enjoy spending time at my parents' cabin, going to the gym,
-            playing basketball, ultimate frisbee and football and going snowboarding and wakeboarding. I have particular
+            playing basketball, ultimate frisbee and football and going snowboarding and wakeboarding. I have
+            particular
             interests in artificial intelligence and financial applications of mathematics that I am considering
             pursuing later in graduate school. However, I would like to work as a developer after I finish my
-            undergraduate degree to help build my knowledge base. I am currently an intern at Trimble working on a new
-            web application written in JavaScript using React and node. Whether you are a potential employer, friend or
-            someone who wants to discuss programming or math, feel free to contact me with the links at the bottom of
+            undergraduate degree to help build my knowledge base. I am currently an intern at Trimble working on a
+            new
+            web application written in JavaScript using React and node. Whether you are a potential employer, friend
+            or
+            someone who wants to discuss programming or math, feel free to contact me with the links at the bottom
+            of
             the page!</p>
     </div>
     <div class="col-lg-4 photo-center">
@@ -84,7 +97,8 @@
 
 <hr class="py-2">
 
-<div class="row" id="projects">
+<span class="anchor" id="projects"></span>
+<div class="row">
     <div class="col-md-12">
         <h2 class="featurette-heading pb-2 text-center">[Projects]</h2>
     </div>
@@ -97,9 +111,12 @@
         <button type="button" class="img-button" data-toggle="modal" data-target="#project1"><img
                 src="images/spades.png" alt="Spades Logo" width="140" height="140"></button>
         <h2>Spades</h2>
-        <p class="text-left">As the final project for my data structures class, a friend and I designed a Java version
-            of the card game Spades. It has a full Swing GUI and allows any combination of human players and smart bots.
-            This was the first large programming project I ever did and I believe it really helped me understand object
+        <p class="text-left">As the final project for my data structures class, a friend and I designed a Java
+            version
+            of the card game Spades. It has a full Swing GUI and allows any combination of human players and smart
+            bots.
+            This was the first large programming project I ever did and I believe it really helped me understand
+            object
             oriented programming.</p>
         <div class="modal face" id="project1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -140,12 +157,17 @@
                         <p class="text-justify mobile-text-center">
                             Spades is a four player card game similar to hearts. We implemented it as a desktop Java
                             application. This game is the first "large" programming project I ever worked on that
-                            actually required design and planning of inter-class relationships. We spent about the last
-                            5 weeks of the semester working on it and were very happy with the way it turned out. I did
-                            most of the design work as well as the GUI implementation while my partner primarily worked
+                            actually required design and planning of inter-class relationships. We spent about the
+                            last
+                            5 weeks of the semester working on it and were very happy with the way it turned out. I
+                            did
+                            most of the design work as well as the GUI implementation while my partner primarily
+                            worked
                             on making the bots "smart." I learned just how important design is while working on this
-                            project because of how many difficulties we ran into trying to just figure things out as we
-                            went along. I also learned a lot about inter-class relationships and making things like the
+                            project because of how many difficulties we ran into trying to just figure things out as
+                            we
+                            went along. I also learned a lot about inter-class relationships and making things like
+                            the
                             GUI and the game driver work together. </p>
                         <div class="pb-2">
                             <a role="button" class="btn btn-primary my-btn-color rounded-0"
@@ -164,7 +186,8 @@
         <button type="button" class="img-button" data-toggle="modal" data-target="#project2"><img
                 src="images/travelTime.png" alt="Travel Time Logo" width="140" height="140"></button>
         <h2>Travel Time</h2>
-        <p class="text-left">Ever wonder when the best time to leave for work was on a particular day to hit the least
+        <p class="text-left">Ever wonder when the best time to leave for work was on a particular day to hit the
+            least
             amount of traffic? During my internship this summer, I sure did. I designed this multi-threaded Java
             application to use the Google Maps API to get traffic
             data, record it and update the GUI in real time.</p>
@@ -207,23 +230,35 @@
                             </a>
                         </div>
                         <p class="text-justify mobile-text-center">
-                            This application uses calls to the Google Maps API to get real time traffic data between two
-                            addresses. It determines the time it will take to drive back and forth between the locations
-                            in current traffic conditions. The idea behind it is that you leave it running for a week
-                            and it will graph the times on the appropriate day of the week tab. You can then save the
-                            graphs as images and reference them in future weeks to see when in the morning or evening
-                            that traffic starts to get bad so that you can leave before or after it does. This was the
-                            first time I used JavaFX to build a GUI and the first multi-threaded application I built.
+                            This application uses calls to the Google Maps API to get real time traffic data between
+                            two
+                            addresses. It determines the time it will take to drive back and forth between the
+                            locations
+                            in current traffic conditions. The idea behind it is that you leave it running for a
+                            week
+                            and it will graph the times on the appropriate day of the week tab. You can then save
+                            the
+                            graphs as images and reference them in future weeks to see when in the morning or
+                            evening
+                            that traffic starts to get bad so that you can leave before or after it does. This was
+                            the
+                            first time I used JavaFX to build a GUI and the first multi-threaded application I
+                            built.
                             Most of the challenges I ran in to while building this had to do with learning threading
-                            such as making the different threads work together to make calls to the API, add data to the
-                            blocking queue and then update the GUI from the queue. Possible future developments include
-                            adding the ability to import or export the data as CSV files so that it is easy to run the
-                            application for a while, stop it and then start it back up later with the same data. Other
+                            such as making the different threads work together to make calls to the API, add data to
+                            the
+                            blocking queue and then update the GUI from the queue. Possible future developments
+                            include
+                            adding the ability to import or export the data as CSV files so that it is easy to run
+                            the
+                            application for a while, stop it and then start it back up later with the same data.
+                            Other
                             future developments may include trying to make this into an android or iOS application.
                         </p>
                         <div class="pb-2">
                             <a role="button" class="btn btn-primary my-btn-color rounded-0"
-                               href="https://github.com/blaskowski94/TravelTime" target="_blank">Click here to see on
+                               href="https://github.com/blaskowski94/TravelTime" target="_blank">Click here to see
+                                on
                                 GitHub</a>
                         </div>
                         <a role="button" class="btn btn-primary my-btn-color rounded-0" href="files/TravelTime.jar"
@@ -281,13 +316,17 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                        <p class="text-justify mobile-text-center">I first implemented and later analyzed the running
+                        <p class="text-justify mobile-text-center">I first implemented and later analyzed the
+                            running
                             time of 6 different sorting algorithms by using mathematical analysis to compute the
-                            theoretical run time. Then I compared that to actual run times of the algorithms when run on
-                            my computer for sorting inputs of different sizes and arrangements. My results were mostly
+                            theoretical run time. Then I compared that to actual run times of the algorithms when
+                            run on
+                            my computer for sorting inputs of different sizes and arrangements. My results were
+                            mostly
                             what I expected based on the analysis of the algorithms which taught me how useful
                             mathematical analysis of algorithms is. I also learned the importance of efficient
-                            algorithms from waiting a half hour for bubble sort to run on a pseudo-randomly distributed
+                            algorithms from waiting a half hour for bubble sort to run on a pseudo-randomly
+                            distributed
                             array of one million elements.</p>
                         <a role="button" class="btn btn-primary my-btn-color rounded-0"
                            href="files/Algorithms_Final_Project.pdf" download>Click here to download paper</a>
@@ -322,8 +361,10 @@
         <button type="button" class="img-button" data-toggle="modal" data-target="#project4"><img
                 src="images/pascal.png" alt="Pascal logo" width="140" height="140"></button>
         <h2>Pascal Compiler</h2>
-        <p class="text-left">For my senior computer science capstone project I wrote a compiler in Java that compiles a
-            modified version of the Pascal language into MIPS assembly. While not very practical, this project helped me
+        <p class="text-left">For my senior computer science capstone project I wrote a compiler in Java that
+            compiles a
+            modified version of the Pascal language into MIPS assembly. While not very practical, this project
+            helped me
             understand the theory behind programming languages.</p>
         <div class="modal face" id="project4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -363,23 +404,29 @@
                             </a>
                         </div>
                         <p class="text-justify mobile-text-center">This project is a Mini-Pascal to MIPS assembly
-                            compiler. It is written in Java. The program parses an input pascal file utilizing its own
+                            compiler. It is written in Java. The program parses an input pascal file utilizing its
+                            own
                             custom scanner, which was generated using JFlex. The parser generates a symbol table and
-                            syntax tree for the pascal program. The syntax tree generated has code folding performed on
+                            syntax tree for the pascal program. The syntax tree generated has code folding performed
+                            on
                             it and is then traversed to generate the assembly code.</p>
 
                         <p>The MIPS assembly can be run using the <a href="http://spimsimulator.sourceforge.net/"
-                                                                     target="_blank">QtSpim</a> simulator. The program
-                            can be run from the command line using the compiled .jar file located in the product folder.
+                                                                     target="_blank">QtSpim</a> simulator. The
+                            program
+                            can be run from the command line using the compiled .jar file located in the product
+                            folder.
                             Sample mini-pascal files can be found in src/pascalfiles. </p>
                         <p>Use the following command while in the same directory as the .jar:</p>
                         <pre>java -jar compiler.jar money.pas </pre>
-                        <p>Note: make sure your .pas file is in the same directory as well or include the path to it. A
+                        <p>Note: make sure your .pas file is in the same directory as well or include the path to
+                            it. A
                             .asm file with the same name as your mini-pascal file will then be generated in the same
                             folder. Load that file into QtSpim and run.</p>
                         <div class="pb-2">
                             <a role="button" class="btn btn-primary my-btn-color rounded-0"
-                               href="https://github.com/blaskowski94/PascalCompiler" target="_blank">Click here to see
+                               href="https://github.com/blaskowski94/PascalCompiler" target="_blank">Click here to
+                                see
                                 on Github</a>
                         </div>
                         <a role="button" class="btn btn-primary my-btn-color rounded-0" href="files/compiler.jar"
@@ -391,10 +438,11 @@
     </div>
     <!-- Pi Research Paper -->
     <div class="col-md-4 text-center">
-        <button type="button" class="img-button" data-toggle="modal" data-target="#project5"><img src="images/pi.png"
-                                                                                                  alt="Raspberry Pi Logo"
-                                                                                                  width="140"
-                                                                                                  height="140"></button>
+        <button type="button" class="img-button" data-toggle="modal" data-target="#project5"><img
+                src="images/pi.png"
+                alt="Raspberry Pi Logo"
+                width="140"
+                height="140"></button>
         <h2>Raspberry Pi Research</h2>
         <p class="text-left">We conducted research on an 8 node Raspberry Pi cluster computer that we built to learn
             about parallel processing. Our research paper won 2nd place for best undergraduate research paper at the
@@ -441,19 +489,29 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                        <p class="text-justify mobile-text-center">We built an eight node Raspberry Pi cluster computer
+                        <p class="text-justify mobile-text-center">We built an eight node Raspberry Pi cluster
+                            computer
                             which uses a distributed memory architecture. The primary goal of this paper is to
-                            demonstrate that Raspberry Pi’s have the potential to be a cost effective educational tool
-                            to teach students about parallel processing. With the cluster we built, we ran experiments
-                            using the Message Passing Interface (MPI) standard as well as multiprocessing implemented in
-                            Python. Our experiments revolve around how efficiency in computing increases or decreases
-                            with different parallel processing techniques. We tested this by implementing a Monte Carlo
-                            calculation of Pi. We ran the experiments with eight nodes and one through four processes
-                            per node. For a comparison, we also ran the computations on a desktop computer. Our primary
-                            goal is to demonstrate how Raspberry Pis are an effective, yet comparatively cheap solution
+                            demonstrate that Raspberry Pi’s have the potential to be a cost effective educational
+                            tool
+                            to teach students about parallel processing. With the cluster we built, we ran
+                            experiments
+                            using the Message Passing Interface (MPI) standard as well as multiprocessing
+                            implemented in
+                            Python. Our experiments revolve around how efficiency in computing increases or
+                            decreases
+                            with different parallel processing techniques. We tested this by implementing a Monte
+                            Carlo
+                            calculation of Pi. We ran the experiments with eight nodes and one through four
+                            processes
+                            per node. For a comparison, we also ran the computations on a desktop computer. Our
+                            primary
+                            goal is to demonstrate how Raspberry Pis are an effective, yet comparatively cheap
+                            solution
                             for learning about parallel processing.</p>
                         <a role="button" class="btn btn-primary my-btn-color rounded-0"
-                           href="files/Parallel%20Processing%20with%208%20Node%20Raspberry%20Pi%20Cluster.pdf" download>Click
+                           href="files/Parallel%20Processing%20with%208%20Node%20Raspberry%20Pi%20Cluster.pdf"
+                           download>Click
                             here to download paper</a>
                     </div>
                 </div>
@@ -466,7 +524,8 @@
                 src="images/addressBook.png" alt="Address Book Logo" width="140" height="140"></button>
         <h2>Address Book</h2>
         <p class="text-left">Looking for somewhere new to store your contacts other than your phone? Check out this
-            JavaScript web application for storing basic name and phone number information. Disclaimer: do not actually
+            JavaScript web application for storing basic name and phone number information. Disclaimer: do not
+            actually
             use this to store contact information.</p>
         <div class="modal face" id="project6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -506,9 +565,12 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                        <p class="text-justify mobile-text-center">This simple address book application uses JavaScript,
-                            HTML and CSS (Bootstrap) to store contact information. I worked on this small project with a
-                            team of two other people for my Compilers I class. The primary goal of this project was to
+                        <p class="text-justify mobile-text-center">This simple address book application uses
+                            JavaScript,
+                            HTML and CSS (Bootstrap) to store contact information. I worked on this small project
+                            with a
+                            team of two other people for my Compilers I class. The primary goal of this project was
+                            to
                             learn how to modify HTML content through JavaScript. In addition, this project helped me
                             learn how to more effectively use a git repository that has more than just one person
                             committing to it as well as elements of good software design. The document includes
@@ -517,7 +579,8 @@
                             permanent storage.</p>
                         <div class="pb-2">
                             <a role="button" class="btn btn-primary my-btn-color rounded-0"
-                               href="https://github.com/blaskowski94/JSAddressBook" target="_blank">Click here to see on
+                               href="https://github.com/blaskowski94/JSAddressBook" target="_blank">Click here to
+                                see on
                                 GitHub</a>
                         </div>
                         <a role="button" class="btn btn-primary my-btn-color rounded-0" href="AddressBook.html"
@@ -548,7 +611,8 @@
 </div>
 <hr class="py-2">
 <!-- Resume -->
-<div class="row" id="resume">
+<span class="anchor" id="resume"></span>
+<div class="row">
     <div class="col-md-5">
         <h2 class="featurette-heading text-center">[Resume]</h2>
 
@@ -574,7 +638,8 @@
                         <li class="list-group-item">Formal Logic &amp; Computation Theory</li>
                         <li class="list-group-item">Programming Languages &amp; Compilers (Java)</li>
                         <li class="list-group-item">Cryptography &amp; Security</li>
-                        <li class="list-group-item">IEEE Software Requirements, Design, Construction &amp; Testing</li>
+                        <li class="list-group-item">IEEE Software Requirements, Design, Construction &amp; Testing
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -644,7 +709,8 @@
 </div>
 <hr class="py-2">
 <!-- Contact header -->
-<div class="row" id="contact">
+<span class="anchor" id="contact"></span>
+<div class="row">
     <h2 class="col-sm-12 featurette-heading text-center pb-2">[Contact]</h2>
 </div>
 <!-- Contact links -->
@@ -686,15 +752,18 @@
 <footer>
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>Bob Laskowski 2018</p>
+    <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/c7376e38f2.js"></script>
 </body>

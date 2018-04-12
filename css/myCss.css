@@ -1,5 +1,13 @@
 body {
     color: #5a5a5a;
+    position: relative;
+}
+
+.anchor {
+    display: block;
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
 }
 
 .featurette-heading {
@@ -119,32 +127,8 @@ body {
 
 }
 
-/* screens between 600 and 768px (portrait tablet/large phone)*/
-@media (max-width: 768px) and (min-width: 600px) {
-}
-
-/* screens smaller than 600px (phones) */
-
-@media (max-width: 600px) {
-
-}
-
-/* Rules for sizing the icon. */
-
-.material-icons.md-18 {
-    font-size: 18px;
-}
-
-.material-icons.md-24 {
-    font-size: 24px;
-}
-
 .material-icons.md-36 {
     font-size: 36px;
-}
-
-.material-icons.md-48 {
-    font-size: 48px;
 }
 
 /* Rules for using icons as black on a light background. */
