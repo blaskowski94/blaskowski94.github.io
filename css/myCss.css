@@ -38,6 +38,10 @@ body {
     width: 500px;
 }
 
+.lead {
+    margin-bottom: 0 !important;
+}
+
 /* screens larger than 992px */
 @media (min-width: 992px) {
     .social:hover, .social a:hover, .social a:hover div, .social:hover div {
