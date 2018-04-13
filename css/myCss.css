@@ -112,12 +112,6 @@ fieldset[disabled] .my-btn-color.active {
     visibility: hidden;
 }
 
-.featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
 .social div {
     color: #01579b;
     font-size: 0.9rem;
@@ -176,7 +170,7 @@ fieldset[disabled] .my-btn-color.active {
 /* screens larger than 768px */
 @media (min-width: 768px) {
     .carousel-item img {
-        height: 500px;
+        height: 400px;
     }
 
     .jumbotron {
