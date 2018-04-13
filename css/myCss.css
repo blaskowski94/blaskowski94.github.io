@@ -216,6 +216,10 @@ fieldset[disabled] .my-btn-color.active {
     .hyperlink {
         color: #01579b;
     }
+    a.hyperlink:link, a.hyperlink:visited, a.hyperlink:hover, a.hyperlink:active {
+        color: #01579b;
+        text-decoration: none;
+    }
 
     .not-on-tablet {
         display: none;
