@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61568813-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-61568813-3');
@@ -21,6 +24,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link href="css/myCss.css" rel="stylesheet">
@@ -38,20 +42,19 @@
 
 <body class="container py-3" data-spy="scroll" data-target="#myNav">
 <!-- Navbar -->
-<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" id="myNav">
-    <a class="navbar-brand" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+<nav class="navbar sticky-top navbar-expand-md primary" id="myNav">
+    <a class="navbar-brand primary" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
+    <button type="button" class="navbar-toggler menu-icon primary" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
             aria-controls="navbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <i class="material-icons">menu</i></button>
 
-    <div id="navbar" class="collapse navbar-collapse">
+    <div id="navbar" class="collapse navbar-collapse primary">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#home">[Home]</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">[About Me]</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">[Projects]</a></li>
-            <li class="nav-item"><a class="nav-link" href="#resume">[Resume]</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">[Contact]</a></li>
+            <li class="nav-item"><a class="nav-link primary" href="#home">[Home]</a></li>
+            <li class="nav-item"><a class="nav-link primary" href="#about">[About Me]</a></li>
+            <li class="nav-item"><a class="nav-link primary" href="#projects">[Projects]</a></li>
+            <li class="nav-item"><a class="nav-link primary" href="#resume">[Resume]</a></li>
+            <li class="nav-item"><a class="nav-link primary" href="#contact">[Contact]</a></li>
         </ul>
     </div>
 </nav>
@@ -422,7 +425,7 @@
                             it and is then traversed to generate the assembly code.</p>
 
                         <p>The MIPS assembly can be run using the <a href="http://spimsimulator.sourceforge.net/"
-                                                                     target="_blank">QtSpim</a> simulator. The
+                                                                     target="_blank" class="link">QtSpim</a> simulator. The
                             program
                             can be run from the command line using the compiled .jar file located in the product
                             folder.
@@ -623,14 +626,14 @@
 <!-- Resume -->
 <span class="anchor" id="resume"></span>
 <div class="row">
-    <div class="col-md-5">
+    <div class="col-lg-5">
         <h2 class="featurette-heading text-center">[Resume]</h2>
 
         <div id="accordion">
-            <div class="card">
-                <div class="card-header text-center" id="headingOne">
+            <div class="card primary">
+                <div class="card-header text-center primary" id="headingOne">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                        <button class="btn primary" data-toggle="collapse" data-target="#collapseOne"
                                 aria-expanded="false" aria-controls="collapseOne">
                             Computer Science Coursework
                         </button>
@@ -638,7 +641,7 @@
                 </div>
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <ul class="list-group">
+                    <ul class="list-group black-text">
                         <li class="list-group-item">Data Structures (Java)</li>
                         <li class="list-group-item">Networking &amp; Communications</li>
                         <li class="list-group-item">Game Programming on the Web (JavaScript)</li>
@@ -654,17 +657,17 @@
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header text-center" id="headingTwo">
+            <div class="card primary">
+                <div class="card-header text-center primary" id="headingTwo">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        <button class="btn primary" data-toggle="collapse" data-target="#collapseTwo"
                                 aria-expanded="false" aria-controls="collapseTwo">
                             Mathematics Coursework
                         </button>
                     </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <ul class="list-group">
+                    <ul class="list-group black-text">
                         <li class="list-group-item">Calculus I, II &amp; III</li>
                         <li class="list-group-item">Statistics</li>
                         <li class="list-group-item">Discrete Mathematics</li>
@@ -675,17 +678,17 @@
                     </ul>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header text-center" id="headingThree">
+            <div class="card primary">
+                <div class="card-header text-center primary" id="headingThree">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                        <button class="btn primary" data-toggle="collapse" data-target="#collapseThree"
                                 aria-expanded="false" aria-controls="collapseThree">
                             Programming Languages
                         </button>
                     </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <ul class="list-group">
+                    <ul class="list-group black-text">
                         <li class="list-group-item">Java</li>
                         <li class="list-group-item">SQL</li>
                         <li class="list-group-item">Python</li>
@@ -703,7 +706,7 @@
                download>Click here to download resume</a>
         </div>
     </div>
-    <div class="col-md-5 offset-md-2">
+    <div class="col-lg-5 offset-lg-2">
         <button type="button" class="btn btn-default border border-dark rounded-0" data-toggle="modal"
                 data-target="#resumeModal"><img src="images/Resume.png" class="img-fluid" alt="Resume"></button>
         <div id="resumeModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -754,16 +757,16 @@
             <div class="text-center pt-2">
                 <i class="zmdi zmdi-linkedin-box"></i>
             </div>
-            <div class="text-center pb-2">linkedin.com/in/boblaskowski</div>
+            <div class="text-center pb-2">linkedin.com/in/blaskowski94</div>
         </a>
     </div>
 </div>
 <hr class="py-2">
 <footer>
-    <p class="float-right"><a href="#">Back to top</a></p>
+    <p class="float-right"><a href="#" class="link">Back to top</a></p>
     <p>Bob Laskowski 2018</p>
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"]:not(.carousel-control-next):not(.carousel-control-prev)');
     </script>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
